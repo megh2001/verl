@@ -26,7 +26,7 @@ ray[default]
 tensordict>=0.8.0,<=0.10.0,!=0.9.0
 torchdata
 transformers
-vllm>=0.8.0
+vllm
 wandb
 packaging>=20.0
 uvicorn
