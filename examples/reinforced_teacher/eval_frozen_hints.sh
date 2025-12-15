@@ -13,7 +13,7 @@ STUDENT_MODEL="Qwen/Qwen2.5-3B-Instruct"  # 3B student
 TEACHER_MODEL="Qwen/Qwen2.5-3B-Instruct"  # 3B teacher (same model for simplicity)
 
 # First, generate hints from teacher model
-python3 examples/reinforced_teacher/generate_teacher_hints.py \
+python3 ./generate_teacher_hints.py \
     --teacher_model=$TEACHER_MODEL \
     --test_file=$MATH_TEST_PATH \
     --output_file=./data/math_small/test_with_hints.parquet \
@@ -61,5 +61,5 @@ python3 -m verl.trainer.main_ppo \
     trainer.save_freq=5 \
     trainer.test_freq=1 \
     trainer.total_epochs=1 \
-    +custom_reward_function.path=$(pwd)/examples/reinforced_teacher/reward_function.py \
-    +custom_reward_function.name=compute_score_frozen_hints $@
+    ++custom_reward_function.path=./reward_function.py \
+    ++custom_reward_function.name=compute_score_frozen_hints $@

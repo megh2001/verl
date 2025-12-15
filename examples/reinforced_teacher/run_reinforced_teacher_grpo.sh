@@ -89,8 +89,8 @@ python3 -m verl.trainer.main_ppo \
     trainer.test_freq=2 \
     trainer.total_epochs=20 \
     trainer.default_hdfs_dir=$OUTPUT_DIR \
-    +custom_reward_function.path=$(pwd)/examples/reinforced_teacher/reward_function.py \
-    +custom_reward_function.name=compute_score $@
+    ++custom_reward_function.path=./reward_function.py \
+    ++custom_reward_function.name=compute_score $@
 
 echo "=========================================="
 echo "Training completed!"

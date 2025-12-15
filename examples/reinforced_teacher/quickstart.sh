@@ -28,7 +28,7 @@ echo ""
 echo "=========================================="
 echo "Step 1: Preparing dataset..."
 echo "=========================================="
-python examples/reinforced_teacher/dataset_prep_math.py \
+python ./dataset_prep_math.py \
     --local_save_dir=$DATA_DIR \
     --num_train=$NUM_TRAIN \
     --num_test=$NUM_TEST
@@ -48,7 +48,7 @@ echo "=========================================="
 echo "This evaluates the student model without any hints."
 echo ""
 
-bash examples/reinforced_teacher/eval_baseline.sh
+bash ./eval_baseline.sh
 
 echo "✓ Baseline evaluation completed"
 echo ""
@@ -60,7 +60,7 @@ echo "=========================================="
 echo "This evaluates the student with hints from untrained teacher."
 echo ""
 
-bash examples/reinforced_teacher/eval_frozen_hints.sh
+bash ./eval_frozen_hints.sh
 
 echo "✓ Frozen hints evaluation completed"
 echo ""
@@ -73,7 +73,7 @@ echo "This will train the teacher model to generate better hints."
 echo "Training will run for 20 epochs. You can monitor progress in WandB."
 echo ""
 
-bash examples/reinforced_teacher/run_reinforced_teacher_grpo.sh
+bash ./run_reinforced_teacher_grpo.sh
 
 echo ""
 echo "=========================================="

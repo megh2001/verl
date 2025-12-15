@@ -102,8 +102,8 @@ python3 -m verl.trainer.main_ppo \
     trainer.default_hdfs_dir=$OUTPUT_DIR \
     \
     `# Custom Reward Function` \
-    +custom_reward_function.path=$(pwd)/examples/reinforced_teacher/reward_function.py \
-    +custom_reward_function.name=compute_score $@
+    ++custom_reward_function.path=./reward_function.py \
+    ++custom_reward_function.name=compute_score $@
 
 echo "=========================================="
 echo "Training completed!"

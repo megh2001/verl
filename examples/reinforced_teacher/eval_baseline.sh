@@ -53,5 +53,5 @@ python3 -m verl.trainer.main_ppo \
     trainer.save_freq=5 \
     trainer.test_freq=1 \
     trainer.total_epochs=1 \
-    +custom_reward_function.path=$(pwd)/examples/reinforced_teacher/reward_function.py \
-    +custom_reward_function.name=compute_score_baseline $@
+    ++custom_reward_function.path=./reward_function.py \
+    ++custom_reward_function.name=compute_score_baseline $@
