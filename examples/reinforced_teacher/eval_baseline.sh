@@ -4,9 +4,9 @@
 
 set -x
 
-# Paths
-MATH_TRAIN_PATH=$HOME/data/math_small/train.parquet
-MATH_TEST_PATH=$HOME/data/math_small/test.parquet
+# Paths - uses current working directory
+MATH_TRAIN_PATH=./data/math_small/train.parquet
+MATH_TEST_PATH=./data/math_small/test.parquet
 
 # Model paths - adjust these to your models
 STUDENT_MODEL="Qwen/Qwen2.5-3B-Instruct"  # 3B student model

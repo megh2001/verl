@@ -21,9 +21,9 @@ TEACHER_MODEL="Qwen/Qwen2.5-3B-Instruct"
 # TEACHER_MODEL="Qwen/Qwen2-7B-Instruct"  # 7B
 # TEACHER_MODEL="Qwen/Qwen2.5-14B-Instruct"  # 14B (A100 80GB)
 
-# Data paths
-MATH_TRAIN_PATH=$HOME/data/math_small/train.parquet
-MATH_TEST_PATH=$HOME/data/math_small/test.parquet
+# Data paths - uses current working directory
+MATH_TRAIN_PATH=./data/math_small/train.parquet
+MATH_TEST_PATH=./data/math_small/test.parquet
 
 train_files="['$MATH_TRAIN_PATH']"
 test_files="['$MATH_TEST_PATH']"

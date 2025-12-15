@@ -13,10 +13,10 @@ echo "ReinforcedTeacher GRPO - Quickstart"
 echo "=========================================="
 echo ""
 
-# Configuration
+# Configuration - uses current working directory
 NUM_TRAIN=500
 NUM_TEST=100
-DATA_DIR=$HOME/data/math_small
+DATA_DIR=./data/math_small
 
 echo "Configuration:"
 echo "  Training examples: $NUM_TRAIN"

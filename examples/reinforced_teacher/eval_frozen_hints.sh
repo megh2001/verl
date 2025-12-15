@@ -4,9 +4,9 @@
 
 set -x
 
-# Paths
-MATH_TRAIN_PATH=$HOME/data/math_small/train.parquet
-MATH_TEST_PATH=$HOME/data/math_small/test.parquet
+# Paths - uses current working directory
+MATH_TRAIN_PATH=./data/math_small/train.parquet
+MATH_TEST_PATH=./data/math_small/test.parquet
 
 # Model paths
 STUDENT_MODEL="Qwen/Qwen2.5-3B-Instruct"  # 3B student
@@ -16,11 +16,11 @@ TEACHER_MODEL="Qwen/Qwen2.5-3B-Instruct"  # 3B teacher (same model for simplicit
 python3 examples/reinforced_teacher/generate_teacher_hints.py \
     --teacher_model=$TEACHER_MODEL \
     --test_file=$MATH_TEST_PATH \
-    --output_file=$HOME/data/math_small/test_with_hints.parquet \
+    --output_file=./data/math_small/test_with_hints.parquet \
     --num_hints=1
 
 # Now evaluate student with frozen hints
-test_files="['$HOME/data/math_small/test_with_hints.parquet']"
+test_files="['./data/math_small/test_with_hints.parquet']"
 train_files="['$MATH_TRAIN_PATH']"
 
 python3 -m verl.trainer.main_ppo \

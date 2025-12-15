@@ -16,9 +16,9 @@ set -x
 TEACHER_MODEL="Qwen/Qwen2-7B-Instruct"          # 7B teacher model
 STUDENT_MODEL="Qwen/Qwen2.5-3B-Instruct"        # 2.5B student model
 
-# Data paths
-MATH_TRAIN_PATH=$HOME/data/math_small/train.parquet
-MATH_TEST_PATH=$HOME/data/math_small/test.parquet
+# Data paths - uses current working directory
+MATH_TRAIN_PATH=./data/math_small/train.parquet
+MATH_TEST_PATH=./data/math_small/test.parquet
 
 # Training configuration
 train_files="['$MATH_TRAIN_PATH']"
