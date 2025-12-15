@@ -60,6 +60,7 @@ python3 -m verl.trainer.main_ppo \
     \
     `# Model Configuration` \
     actor_rollout_ref.model.path=$TEACHER_MODEL \
+    actor_rollout_ref.model.override_config.attn_implementation=eager \
     actor_rollout_ref.model.use_remove_padding=True \
     actor_rollout_ref.model.enable_gradient_checkpointing=True \
     \
