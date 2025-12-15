@@ -56,7 +56,7 @@ python3 -m verl.trainer.main_ppo \
     trainer.logger='["console","wandb"]' \
     trainer.project_name='reinforced_teacher' \
     trainer.experiment_name='eval_frozen_hints' \
-    trainer.n_gpus_per_node=4 \
+    trainer.n_gpus_per_node=1 \
     trainer.nnodes=1 \
     trainer.save_freq=5 \
     trainer.test_freq=1 \

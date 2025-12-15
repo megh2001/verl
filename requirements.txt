@@ -36,5 +36,6 @@ math_verify
 tensorboard
 
 # Optional: Flash Attention (install separately for better performance)
-# pip install flash-attn --no-build-isolation
-# flash-attn
+# Install with: pip install ninja && pip install flash-attn --no-build-isolation
+ninja
+flash-attn
